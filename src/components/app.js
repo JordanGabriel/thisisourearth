@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import PostsIndex from './posts_index';
 
 export default class App extends Component {
   render() {
     return (
-      <h3>Hello World!!</h3>
+      <div>
+        {this.props.children}
+        <PostsIndex/>
+      </div>
     );
   }
 }
