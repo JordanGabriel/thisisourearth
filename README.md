@@ -1,1 +1,1 @@
-###React + Redux + Contentful
+React + Redux + Contentful
