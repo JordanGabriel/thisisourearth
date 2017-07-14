@@ -3,6 +3,7 @@ import axios from 'axios';
 export const FETCH_POSTS = 'FETCH_POSTS';
 export const FETCH_POST = 'FETCH_POST';
 export const FETCH_ASSET = 'FETCH_ASSET';
+export const FETCH_LATEST = 'FETCH_LATEST';
 
 const API_BASE_URL = 'https://cdn.contentful.com';
 const API_SPACE_ID = 'od9laogycy16';
@@ -27,6 +28,13 @@ export function fetchAsset(id) {
 
   return {
     type: FETCH_ASSET,
+    payload: request
+  };
+}
+export function fetchLatest() {
+  const request = axios.get(`${API_BASE_URL}/spaces/${API_SPACE_ID}/entries?access_token=${API_TOKEN}&content_type=post&limit=1&order=-sys.updatedAt`);
+  return {
+    type: FETCH_LATEST,
     payload: request
   };
 }

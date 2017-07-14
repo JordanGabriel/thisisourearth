@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import PostsIndex from './posts_index';
+import Menu from './menu';
 
 export default class App extends Component {
   render() {
     return (
       <div>
+      	<Menu />
         {this.props.children}
-        <PostsIndex/>
       </div>
     );
   }

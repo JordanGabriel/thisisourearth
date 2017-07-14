@@ -28,9 +28,7 @@ class PostsShow extends Component {
       <section className="banner style1 orient-left content-align-left image-position-right fullscreen onload-image-fade-in onload-content-fade-right">
         <div className="content">
           <h1>{post.fields.title}</h1>
-          <div className="major" dangerouslySetInnerHTML={this.renderMarkdown(post.fields.description)} />
-          <br />
-          <Link to={"/"} className="button big wide">Back</Link>
+          <Link href="/" className="button big wide">Back</Link>
         </div>
         <div className="image">
           <Asset assetId={post.fields.featuredImage.sys.id} />

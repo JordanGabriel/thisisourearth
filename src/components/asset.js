@@ -7,7 +7,7 @@ class Asset extends Component {
     this.props.fetchAsset(this.props.assetId)
   }
   renderAsset() {
-    return this.props.assets.map((asset) => {
+    return this.props.assets.map((asset, i) => {
       if (asset.sys.id == this.props.assetId) {
         return (
           <img src={asset.fields.file.url} alt={asset.fields.file.fileName} key={`${asset.sys.id}`}/>
